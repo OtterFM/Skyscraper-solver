@@ -2,6 +2,34 @@
 
 This program solves a 4 × 4 Skyscraper puzzle.
 
+## Compilation
+
+Compile the project by running:
+
+```sh
+make
+```
+
+The executable will be named `skyscraper`.
+
+To remove the generated object files:
+
+```sh
+make clean
+```
+
+To remove all generated files, including the executable:
+
+```sh
+make fclean
+```
+
+To rebuild the project from scratch:
+
+```sh
+make re
+```
+
 ## Usage
 
 Pass the puzzle clues to the program as a single string argument. For example:
@@ -36,6 +64,15 @@ For example, the input above represents:
 ## Output
 
 The program prints the first valid solution it finds for the given input, if one exists.
+
+For example, for the input above:
+
+```text
+1 2 3 4
+2 3 4 1
+3 4 1 2
+4 1 2 3
+```
 
 It prints `Error` if:
 
