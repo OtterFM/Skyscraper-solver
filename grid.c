@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   grid.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ezaimaki <ezaimaki@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/22 11:04:27 by ezaimaki          #+#    #+#             */
-/*   Updated: 2026/08/22 22:17:10 by ezaimaki         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 int		ft_grid(char *str, char *grid);
 void	ft_parse_str(char *str, char *input);
 int		ft_build_grid(char *grid, char *col, char *row, int i);
@@ -19,7 +7,8 @@ int		ft_check_col(char *grid, char *col, int col_num);
 int		ft_check_col_back(char *grid, char *col, int col_num);
 int		ft_check_visibility(char *grid, char **input, int i, char j);
 
-// returns 0 if no solution, 1 if yes AND builds a grid
+//separates input into column and row numbers (in separate arrays)
+// returns 0 if no solution, 1 if solution exists AND grid gets filled
 int	ft_grid(char *str, char *grid)
 {
 	char	input[16];
@@ -43,7 +32,7 @@ int	ft_grid(char *str, char *grid)
 		return (1);
 }
 
-//returns 0 if no solutions, 1 if yes
+//returns 0 if no solutions, 1 if solution exists and fills grid with correct numbers
 int	ft_build_grid(char *grid, char *col, char *row, int i)
 {
 	char	j;
@@ -69,6 +58,10 @@ int	ft_build_grid(char *grid, char *col, char *row, int i)
 	return (0);
 }
 
+//checks if current char number(j) already exists in current row + column
+//if not, places it in current position
+//if a row or column is full, checks if input visibility matches
+//returns 1 if success, 0 if something doesn't fit
 int	ft_check_visibility(char *grid, char **input, int i, char j)
 {
 	if (j == grid[(i / 4) * 4] || j == grid[(i / 4) * 4 + 1]

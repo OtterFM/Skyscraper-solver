@@ -1,21 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   col_row_check.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ezaimaki <ezaimaki@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/22 11:04:27 by ezaimaki          #+#    #+#             */
-/*   Updated: 2026/08/22 20:13:59 by ezaimaki         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 int	ft_check_row(char *grid, char *row, int row_num);
 int	ft_check_row_back(char *grid, char *row, int row_num);
 int	ft_check_col(char *grid, char *col, int col_num);
 int	ft_check_col_back(char *grid, char *col, int col_num);
 
-//returns 1 if placement ok, 0 if not
+//all return 1 if placement ok, 0 if not
+
 int	ft_check_row(char *grid, char *row, int row_num)
 {
 	int		counter;

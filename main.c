@@ -1,21 +1,12 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ezaimaki <ezaimaki@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/22 11:04:27 by ezaimaki          #+#    #+#             */
-/*   Updated: 2026/08/22 20:07:30 by ezaimaki         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <unistd.h>
 
 int		ft_grid(char *str, char *grid);
 int		ft_check_input(int argc, char **argv);
 void	ft_printchar(char *str);
 
+//creates grid array and initialises all values to '0'
+//checks input validity
+//builds grid
 int	main(int argc, char *argv[])
 {
 	char	grid[16];

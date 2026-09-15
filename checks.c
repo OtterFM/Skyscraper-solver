@@ -1,18 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   checks.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ezaimaki <ezaimaki@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/22 11:04:27 by ezaimaki          #+#    #+#             */
-/*   Updated: 2026/08/23 12:22:47 by ezaimaki         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 int		ft_check_input(int argc, char **argv);
 void	ft_parse_str(char *str, char *input);
 
+//checks that input is a string 31 chars long, alternating between spaces and a number between 1-4 
 int	ft_check_input(int argc, char **argv)
 {
 	int	i;
@@ -42,6 +31,7 @@ int	ft_check_input(int argc, char **argv)
 	return (1);
 }
 
+//string is parsed and the char numbers are put in an array
 void	ft_parse_str(char *str, char *input)
 {
 	int	i;
